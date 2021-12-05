@@ -1,0 +1,35 @@
+# to create dsfm conda env:
+# conda env create --file environment.yml
+
+# to update:
+# conda activate dsfm
+# conda env update --file environment.yml --prune
+
+# include with version id
+
+name: dsfm # name
+channels:
+- conda-forge
+dependencies:
+- python=3.8
+- anaconda
+- pip
+# conda packages, append used dependences
+- numpy=1.21.2
+- geopandas=0.9.0
+- scikit-learn=1.0.1
+- pandas=1.3.4
+- tensorflow>=2.0.*
+- h5py=2.10.0
+# astronomy data
+- astropy=4.3.1
+# jupyter / ipython
+- jupyterlab
+- pyspark=3.2.0
+- awscli
+- optuna
+- plotly
+# pip packages
+- pip:
+  # weather data
+  - meteostat==1.5.10
